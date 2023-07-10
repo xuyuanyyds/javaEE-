@@ -1,0 +1,338 @@
+/* 全局样式 */
+
+html {//启用平滑滚动效果，比如点击“热门景点”这个导航栏链接时，页面就会自动平滑地向下滚动到对应位置。
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* 网站标题和导航栏 */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.my-custom-heading h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top：0px；
+  margin-bottom：0px；
+}
+
+nav ul{
+  list-style-type:none;
+  display:inline-block;
+  text-align:center;
+}
+
+nav li{
+  display:inline-block;
+  padding-right：10px；
+}
+
+nav a{
+  color:white;
+  text-decoration:none ;
+}
+nav a:hover{ /* 鼠标悬停时修改链接颜色*/
+  color:#ffcc00 ;
+}
+#slider {
+  background-color: silver;
+}
+
+.screen-1__heading{
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  font-size:46px;
+  color: #4d555d;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.screen-1__heading b{
+  color: #f01400;
+  font-weight: normal;
+}
+
+/* 首页图 */
+#slider {
+  position:relative;
+  height:590px; /* 设置图高度 */
+}
+.slider-image { /* 图片相关属性设置 */
+  width:100%;
+  height:auto ;
+}
+
+.slider-text { /* 文字说明相关属性设置*/
+  position:absolute ; top :50% ; left :50% ; transform :translate(-50%,-50%) ;
+  font-size ：24pt；color:white；text-shadow ：1px black；
+}
+
+
+/* 推荐景点列表样式 */
+#recommended-spots {
+
+  justify-content:center ;
+}
+
+
+
+#recommended-shop {
+
+  justify-content:center ;
+}
+
+.image-container img {
+  display: inline-block;
+}
+
+/* 景点卡片样式 */
+.spot-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0,0,0,0.3) 5px 5px 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+/* 图片大小和形状 */
+.spot-card img {
+  width:100%;
+  height:auto;
+  border-top-left-radius:8px;
+  border-top-right-radius:8px
+}
+
+/* 标题字体颜色和大小 */
+.spot-card h2{
+  font-size :28pt ;
+  color:#666 ;
+  margin-bottom :15pt ;
+  letter-spacing:-1pt ;
+  font-weight:bold ;
+  line-height :1.4em ;
+}
+.spot-card p1{
+  font-size: 18px;
+  line-height: 1.5;
+  animation-name: fade-in-anim;
+  animation-duration: 1s;
+  color: cadetblue;
+}
+.spot-card p2{
+  font-size: 18px;
+  line-height: 1.5;
+  animation-name: fade-in-anim;
+  animation-duration: 1s;
+  color: cornflowerblue;
+}
+
+
+@keyframes fade-in-anim {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+#recommended-shop {
+  text-align: center;
+}
+
+#recommended-shop h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+.spot-card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color:#f0f0f0;
+  padding-bottom :1em ;
+  border-radius : .4em ;
+  box-shadow : rgba(200,200,200,.6) .3em .3em .7em inset , rgba(255,255,255,.8) -.2em -.2em .5em inset ;
+}
+
+#recommended-shop p1,p2{
+  color: brown;
+}
+.spot-card2 img {
+  width :100%;
+  height:auto;
+  margin-top :1.5rem ;
+  border-radius:.4rem ;
+}
+
+.spot-card2 h2, h3{
+  color:#333333;
+  margin-top:.8rem;
+}
+
+.spot-card p1{
+  text-align:left ;
+  line-height:1.6 ;
+  padding-left:.9rem ;
+  padding-right:.9rem ;
+  color: hotpink;
+
+}
+
+.spot-card p{
+  font-weight:bold ;
+  color:#707070;
+}
+
+
+.spot-card h3{
+  margin-top：0px；
+  margin-bottom：5px；
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+h1::after {
+  display:block;
+  content:'';
+  border-bottom: solid .1em #ccc;
+  transform-origin:left top ;
+  transform : scaleX(0);
+  transition : transform .4s ease-out ;
+}
+
+h1:hover::after {transform : scaleX(1);}
+
+/* 酒店预订搜索框样式 */
+
+#hotel-search-box {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+  padding: .6rem;
+  border-radius: .4rem;
+  width: calc(100% - 6rem);
+
+  background-color:#f0f0f0;
+  color:#333 ;
+  border : none ;
+  box-shadow : rgba(200,200,200,.6) -.3em -.3em .7em inset , rgba(255,255,255,.8) .2em .2em .5em inset ;
+}
+
+button[type="submit"]{
+  width :70% ;
+  height:auto ;
+  margin-top:.8rem;
+  background-color:#007bff;
+  color:white ;
+  border:none ;
+  padding:.4rem ;
+  font-size :1.2rem ;
+  border-radius :.4rem ;
+
+}
+button[type="submit"]:hover{
+  cursor:pointer ;
+  background-color:#0069d9;
+
+}
+
+
+#hotel-search-box {
+  text-align:center;
+  padding-top:50PX;padding-bottom:50PX ;
+}
+.hotel-search-form { /* 查询表单相关属性设置 */
+  display:inline-block ;
+  border-radius :20px ;background-color:#f2f2f2 ;
+  padding-left ：20PX;padding-right: 20PX;padding-top :10Px；padding-bottom ：10Px；
+
+}
+
+.form-group label{
+  font-weight:bold;
+  display:block ;
+  margin-bottom:5px;
+}
+.form-group input[type=text],select {
+  width:200px;border-radius :5px;height ：30Px;margin-right：10Px；margin-left：10Px；
+}
+.form-group button[type=submit] {
+  background-color:#333;color:white;border:none;width:auto;display:inline-block;text-align:center;font-size ：16pt;padding-left ：15PX;padding-right：15PX;margin-top :10P X;margin- bottom
+}
+
+/* 友情链接区域样式 */
+footer.footer {
+  position:relative;
+  height:auto;overflow:hidden;background-color:#333;color:white;
+}
+
+.footer-links ul li a:hover{ /*鼠标悬停时修改链接颜色*/
+  color:#ffcc00 ;
+}
+
+
+/* CSS 样式 */
+.hotel {
+  margin: 20px auto;
+  width: 80%;
+}
+
+
+.hotel h2 {
+  font-size: 28px;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.hotel h3 {
+  color: #666;
+  text-align: center;
+}
+
+.hotel p1, p2 {
+  line-height: 1.5em;
+}
+
+.hotel a {
+  text-decoration:none;
+  color: darkblue;
+}
+
+.hotel img {
+  display: inline-block;
+  width: 23%;
+  margin-right: 1%;
+  float: left;
+}
+
+/* 最后一个图片去掉右边距 */
+.hotel img:last-child {
+  margin-right:0;
+}
+
